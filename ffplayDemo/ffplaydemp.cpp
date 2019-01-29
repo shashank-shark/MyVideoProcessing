@@ -42,18 +42,6 @@ int main()
     
     res = exec("ffplay -i ../bird.mp4");
     std::cout << "OUTPUT" << res << std::endl;
-    // std::cout << "cp stdout res: <" << res << ">" << std::endl;
-
-    // res = exec("cp d-oh 2>&1");
-    // std::cout << "cp stdout&stderr res: <" << res << ">" << std::endl;
-
-    // res = exec("echo stdout 2>&1 >&1");
-    // std::cout << "stdout res: <" << res << ">" << std::endl;
-    
-    // res = exec("echo stderr 2>&1 >&2");
-    // std::cout << "stderr res: <" << res << ">" << std::endl;
-    
-
     cout<<"End\n";
     return 0;
 }
