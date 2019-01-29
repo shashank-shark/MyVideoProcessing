@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
     std::string res;
     
     res = exec("ffmpeg -i ../drop.avi -fs 900K outputMyMin.mp4");
-
+    
     res = exec("ffmpeg -i ../drop.avi -fs 10MB outputMyMax.mp4");
 
     std::cout << "OUTPUT" << res << std::endl;

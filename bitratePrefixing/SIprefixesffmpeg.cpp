@@ -41,6 +41,7 @@ int main(int argc, char *argv[])
     std::string res;
     
     res = exec("ffmpeg -i ../bird.mp4 -b:v 1500000 output.mp4");
+    res = exec("ffprobe output.mp4 > outputFileInfo.txt 2>&1");
 
     /* also could be written as */
 
