@@ -41,6 +41,7 @@ int main(int argc, char *argv[])
     std::string res;
     
     res = exec("ffplay -i ../bird.mp4");
+    res = exec("ffprobe ../bird.mp4 > bird.txt 2>&1");
     std::cout << "OUTPUT" << res << std::endl;
     cout<<"End\n";
     return 0;

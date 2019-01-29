@@ -40,9 +40,11 @@ int main(int argc, char *argv[])
     cout<<"Start\n";
     std::string res;
     
+    res = exec("ffprobe ../drop.avi > drop.txt 2>&1");
+
     res = exec("ffmpeg -i ../drop.avi -fs 900K outputMyMin.mp4");
     res = exec("ffprobe outputMyMin.mp4 > outputMyMin.txt 2>&1");
-    
+
     res = exec("ffmpeg -i ../drop.avi -fs 10MB outputMyMax.mp4");
     res = exec("ffprobe outputMyMax.mp4 > outputMyMax.txt 2>&1");
 
