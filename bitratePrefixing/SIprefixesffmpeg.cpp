@@ -41,6 +41,13 @@ int main(int argc, char *argv[])
     std::string res;
     
     res = exec("ffmpeg -i ../bird.mp4 -b:v 1500000 output.mp4");
+
+    /* also could be written as */
+
+    res = exec("ffmpeg -i ../bird.mp4 -b:v 1500K output.mp4");
+    res = exec("ffmpeg -i ../bird.mp4 -b:v 1.5M output.mp4");
+    res = exec("ffmpeg -i ../bird.mp4 -b:v 0.0015G output.mp4");
+
     std::cout << "OUTPUT" << res << std::endl;
     cout<<"End\n";
     return 0;
