@@ -1,0 +1,59 @@
+#include <cstdio>
+#include <iostream>
+#include <memory>
+#include <stdexcept>
+#include <string>
+#include <array>
+
+std::string exec(const char* cmd)
+{
+    std::array<char, 128> buffer;
+    std::string result;
+    auto pipe = popen(cmd, "r");
+    
+    if (!pipe) throw std::runtime_error("popen() failed!");
+    
+    while (!feof(pipe))
+    {
+        if (fgets(buffer.data(), 128, pipe) != nullptr)
+            result += buffer.data();
+    }
+    
+    auto rc = pclose(pipe);
+    
+    if (rc == EXIT_SUCCESS)
+    {
+        std::cout << "SUCCESS\n";
+    }
+    else
+    {
+        std::cout << "FAILED\n";
+    }
+    
+    return result;
+}
+
+using namespace std;
+
+int main()
+{
+    cout<<"Start\n";
+    std::string res;
+    
+    res = exec("ffplay -i ../bird.mp4");
+    std::cout << "OUTPUT" << res << std::endl;
+    // std::cout << "cp stdout res: <" << res << ">" << std::endl;
+
+    // res = exec("cp d-oh 2>&1");
+    // std::cout << "cp stdout&stderr res: <" << res << ">" << std::endl;
+
+    // res = exec("echo stdout 2>&1 >&1");
+    // std::cout << "stdout res: <" << res << ">" << std::endl;
+    
+    // res = exec("echo stderr 2>&1 >&2");
+    // std::cout << "stderr res: <" << res << ">" << std::endl;
+    
+
+    cout<<"End\n";
+    return 0;
+}
