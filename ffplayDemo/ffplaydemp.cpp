@@ -35,7 +35,7 @@ std::string exec(const char* cmd)
 
 using namespace std;
 
-int main()
+int main(int argc, char *argv[])
 {
     cout<<"Start\n";
     std::string res;
