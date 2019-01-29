@@ -1,0 +1,18 @@
+FFmpeg command-line tools
+----------------------------
+
+ffmpeg - fast audio and video encoder / devcoder
+ffplay - media player
+ffprobe - shows media files characteristics
+ffserver - broadcast server for multimedia streaming using HTTP and RTSP protocols.
+
+FFmpeg software libraries
+-----------------------------
+libavcodec	-  software library for various multimedia codecs
+libavdevice	-  software library for devices
+libavfilter	-  software library containing filters
+libavformat	-  software library for media formats
+libavutil	-  software library containing various utilities
+libpostproc	-  software library for post processing
+libswresample	-  software library for audio resampling
+libswscale	-  software library for media scaling
