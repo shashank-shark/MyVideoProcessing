@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
     cout<<"Start\n";
     std::string res;
     
-    res = exec("ffmpeg -i ../bird.mp4 -vf \"split [main][tmp]; [tmp] crop=iw:ih/2:0:0, vflip [flip]; [main][flip] overlay=0:H/2\" output.mp4");
+    res = exec("ffmpeg -i ../../bird.mp4 -vf hqdn3d output.mp4");
     // res = exec("ffprobe ../bird.mp4 > bird.txt 2>&1");
     std::cout << "OUTPUT" << res << std::endl;
     cout<<"End\n";
