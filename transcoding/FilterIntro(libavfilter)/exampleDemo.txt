@@ -1,0 +1,5 @@
+                [main]
+input --> split ---------------------> overlay --> output
+            |                             ^
+            |[tmp]                  [flip]|
+            +-----> crop --> vflip -------+
