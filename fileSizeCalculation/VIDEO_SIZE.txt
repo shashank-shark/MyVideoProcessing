@@ -1,0 +1,19 @@
+video_size = video_bitrate * time_in_seconds / 8
+
+audio_size = sampling_rate * bit_depth * channels * time_in_seconds / 8
+
+audio_size = bitrate * time_in_seconds / 8
+
+(Q)	For example to calculate the final size of 10-minutes video clip with the 1500 kbits/s video bit rate and 128
+kbits/s audio bitrate, we can use the equations:
+
+	file_size = video_size + audio_size
+	file_size = (video_bitrate + audio_bitrate) * time_in_seconds / 8
+	file_size = (1500 kbit/s + 128 kbits/s) * 600 s
+	file_size = 1628 kbit/s * 600 s
+	file_size = 976800 kb = 976800000 b / 8 = 122100000 B / 1024 = 119238.28125 KB
+	file_size = 119238.28125 KB / 1024 = 116.443634033203125 MB ≈ 116.44 MBs
+
+1 byte (B) = 8 bits (b)
+1 kilobyte (kB or KB) = 1024 B
+1 megabyte (MB) = 1024 KB, etc.
